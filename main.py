@@ -15,14 +15,16 @@ from selenium.webdriver.support import expected_conditions as EC
 
 url = sys.argv[1]
 
-if os.name == "nt":
-    geckopath = "./driver/geckodriver.exe"
-else:
-    geckopath = "./driver/geckodriver"
+
+geckopath = sys.
+# if os.name == "nt":
+#     geckopath = "./driver/geckodriver.exe"
+# else:
+#     geckopath = "./driver/geckodriver"
 
 
 
-with webdriver.Firefox() as driver1:
+with webdriver.Firefox(ge) as driver1:
     # driver1.get("https://www.nettiauto.com/audi/a4/bensiini?id_vehicle_type=1&id_gear_type=3&id_country[]=73")
     driver1.get(url)
     totalPages = int(driver1.find_element(By.CLASS_NAME, "totPage").text)
